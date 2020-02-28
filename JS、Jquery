@@ -1,0 +1,32 @@
+//IE传中文乱码：
+  前段：encodeURI($(dom).val()， "UTF-8"); 使用encodeURI进行编码
+  后端Java代码：
+  URLDecoder.decode(inputStr,"UTF-8")： 后端代码针对前段传递过来的字符串，进行解码
+  
+//移除点击后焦点弹回最上面的事件
+$("#btn1").click(function(event){
+  event.preventDefault();
+});
+
+//移除点击事件
+$('#btn1').removeAttr('onclick');
+
+//设置radio只读
+$("input[name='radio1']").attr("disabled",true)
+
+// 给所有input绑定oninput事件
+var arrays_input = document.querySelectorAll('input');
+for(var i=0;i<arrays_input.length;i++){
+	let input = arrays_input[i];
+	input.oninput = handleInput;
+	function handleInput(e) {
+		doSearch();
+	}
+}
+// 给input绑定oninput事件
+let input = document.querySelector('input');
+input.oninput = handleInput;
+function handleInput(e) {
+	doSearch();
+   
+}
