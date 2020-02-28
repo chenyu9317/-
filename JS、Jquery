@@ -13,6 +13,7 @@ $('#btn1').removeAttr('onclick');
 
 //设置radio只读
 $("input[name='radio1']").attr("disabled",true)
+**disabled为失效，readonly为只读。设置了失效的时候，表单不能序列号此字段，所以数据提交不到后台，慎用
 
 // 给所有input绑定oninput事件
 var arrays_input = document.querySelectorAll('input');
