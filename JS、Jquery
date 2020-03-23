@@ -1,5 +1,5 @@
 //IE传中文乱码：
-  前段：encodeURI($(dom).val(), "UTF-8"); 使用encodeURI进行编码
+  前段：encodeURI($(dom).val(), "UTF-8"); decodeURI(par)解码
   后端Java代码：
   URLDecoder.decode(inputStr,"UTF-8")： 后端代码针对前段传递过来的字符串，进行解码
   
